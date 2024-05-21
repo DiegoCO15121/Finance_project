@@ -12,7 +12,7 @@ bool file_exist(string address){
 }
 void rest_money(float mny){
     ofstream file;
-    string address = "mny.txt", aux;
+    string address = "C:/data_finances/mny.txt", aux;
     float money_file;
 
     if (file_exist(address)){
@@ -31,7 +31,7 @@ void rest_money(float mny){
     }
 }
 struct Register{
-    char exp[30];
+    char exp[50];
     float price;
     char date[15];
 };
@@ -39,7 +39,7 @@ struct Register{
 // Mains functions
 void saveMoney(){
     ofstream file;
-    string address = "mny.txt", aux;
+    string address = "C:/data_finances/mny.txt", aux;
     float money_file,mny;
 
     cout<<"Amount to save: ";cin>>mny;
@@ -66,8 +66,8 @@ void saveMoney(){
 }
 
 void saveExpenses(){
-    if (file_exist("mny.txt")){ //Compressing file existence to avoid data loss
-        string addss = "Exp";
+    if (file_exist("C:/data_finances/mny.txt")){ //Compressing file existence to avoid data loss
+        string addss = "C:/data_finances/Exp";
         int x;
 
         cout << "Number of products to be registred: ";
@@ -105,7 +105,7 @@ void saveExpenses(){
 }
 
 void showMoney(){
-    string addss = "mny.txt";
+    string addss = "C:/data_finances/mny.txt";
     string data;
 
     if (file_exist(addss)){
@@ -120,7 +120,7 @@ void showMoney(){
 }
 
 void showExpenses(){
-    string addss= "Exp";
+    string addss= "C:/data_finances/Exp";
     Register exp;
     int i = 1;
 
